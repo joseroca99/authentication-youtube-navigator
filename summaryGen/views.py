@@ -153,6 +153,8 @@ def summary(request):
         videoID = request.POST.get('videoID')
         try:
             user_prompt = request.POST.get('user_prompt')
+            if user_prompt == None:
+                user_prompt = ''
         except:
             user_prompt = ''
         print(videoID)
